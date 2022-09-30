@@ -1,0 +1,48 @@
+[
+    {
+        "name": "John",
+        "timezone": "America/Los_Angeles",
+        "phone_number" : "+18183819714",
+        "reminder_time": {
+            "Monday": "10:30 AM",
+            "Tuesday": "12:55 PM",
+            "Wednesday": "11:59 AM",
+            "Thursday": "10:30 AM",
+            "Friday": "10:30 AM",
+            "Saturday": "10:30 AM",
+            "Sunday": "10:30 AM"
+        },
+        "content": [
+            {
+                "level": 1,
+                "type": "SMS",
+                "minutes_shift": 60,
+                "message": "Hi {name}! Are you ready to work?",
+                "phone_number": "+18183819714",
+                "expected_response": "Yes, yes, yes sir, on my way",
+                "wait_minutes": 5,
+                "next_level": 2
+            },
+            {
+                "level": 2,
+                "type": "Voice",
+                "minutes_shift": 50,
+                "message": "https://api.twilio.com/cowbell.mp3",
+                "phone_number": "+18183819714",
+                "expected_response": "Yes, yes, yes sir, on my way",
+                "wait_minutes": 5,
+                "next_level": 3
+            },
+            {
+                "level": 3,
+                "type": "SMS",
+                "minutes_shift": 40,
+                "message": "Hi Boss",
+                "phone_number": "+18183819714",
+                "expected_response": "Yes, yes, yes sir, on my way",
+                "wait_minutes": 5,
+                "next_level": 0
+            }
+        ]
+    }
+]
